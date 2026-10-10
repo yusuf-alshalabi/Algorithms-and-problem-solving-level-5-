@@ -141,6 +141,9 @@
   <ItemGroup>
     <ClCompile Include="problem-Solving-Level5.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DS\clsDblLinkedList.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
