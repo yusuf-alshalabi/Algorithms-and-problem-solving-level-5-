@@ -1,0 +1,48 @@
+# Project 02: Queue Implementation (clsMyQueue)
+
+## 📌 Overview
+A generic C++ implementation of a **Queue** template class (`clsMyQueue<T>`) designed around the **First-In, First-Out (FIFO)** principle. This structure is built using **Object Composition**, encapsulating the `clsDblLinkedList<T>` implementation from Project 01 to manage underlying dynamic storage cleanly and efficiently.
+
+---
+
+## 🏗️ Architecture & Design Pattern
+
+Rather than reimplementing low-level node linkage, `clsMyQueue<T>` leverages the **Adapter / Composition Pattern**:
+
+- **Enqueueing (push)**: Delegates to `clsDblLinkedList::InsertAtEnd()` in O(1) time.
+- **Dequeueing (pop)**: Delegates to `clsDblLinkedList::DeleteFirstNode()` in O(1) time.
+- **Front Inspection (front)**: Resolves index 0 via `clsDblLinkedList::GetItem(0)`.
+- **Back Inspection (back)**: Resolves the last element index via `clsDblLinkedList::GetItem(Size - 1)`.
+
+---
+
+## 🛠️ Public Methods & API Specification
+
+| Method Signature | Return Type | Description |
+|---|---|---|
+| push(T item) | void | Inserts an element at the back (tail) of the queue. |
+| pop() | void | Removes the element at the front (head) of the queue. |
+| front() | T | Accesses the first inserted element without removal. |
+| back() | T | Accesses the most recently inserted element without removal. |
+| Size() | int | Returns the total count of elements currently in the queue. |
+| IsEmpty() | bool | Evaluates whether the queue contains zero elements. |
+| Print() | void | Displays all queue elements sequentially from front to back. |
+
+---
+
+## ⏱️ Time & Space Complexity Analysis
+
+| Operation | Time Complexity | Auxiliary Space | Complexity Rationale |
+|---|---|---|---|
+| push | O(1) | O(1) | Appends directly to list tail. |
+| pop | O(1) | O(1) | Removes list head directly without traversal. |
+| front | O(1) | O(1) | Fetches head node value directly. |
+| back | O(n) | O(1) | Traverses list to target index (Size - 1). |
+| Size | O(1) | O(1) | Returns dynamic _Size variable tracked on mutation. |
+| IsEmpty | O(1) | O(1) | Checks if _Size == 0. |
+
+---
+
+## 🧪 Verification & Testing
+
+The project is backed by a static test orchestrator `clsMyQueueTest` verifying operations sequentially.
