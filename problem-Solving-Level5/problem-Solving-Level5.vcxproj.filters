@@ -16,6 +16,9 @@
     <Filter Include="Header Files\DS">
       <UniqueIdentifier>{bffaf75d-ccab-47cd-b837-8ff9838a90e7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Test">
+      <UniqueIdentifier>{d36e035c-f07b-4881-997f-92e294072a15}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="problem-Solving-Level5.cpp">
@@ -25,6 +28,9 @@
   <ItemGroup>
     <ClInclude Include="DS\clsDblLinkedList.h">
       <Filter>Header Files\DS</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\clsDblLinkedListTest.h">
+      <Filter>Header Files\Test</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
