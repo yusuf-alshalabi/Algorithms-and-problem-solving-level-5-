@@ -6,18 +6,18 @@ Each project is organized as an independent modular folder containing its implem
 
 ---
 
-## ?? Completed Projects
+## 📂 Completed Projects
 
 | # | Project Name | Underlying Structure | Key Features / Extensions | Documentation Link |
 |---|---|---|---|---|
-| 01 | **Doubly Linked List** | Pointer-based Node List | Core CRUD Operations + 8 Incremental Extensions (Size, Reversal, Indexing, Test Suite) | ?? [View Documentation](./problem-Solving-Level5/Projects/Project01_DoublyLinkedList/README.md) |
-| 02 | **Queue Implementation** | Doubly Linked List Wrapper | FIFO Operations (push, pop, front, back, Size, IsEmpty) via Composition | ?? [View Documentation](./problem-Solving-Level5/Projects/Project02_MyQueue/README.md) |
+| 01 | **Doubly Linked List** | Pointer-based Node List | Core CRUD Operations + 8 Incremental Extensions (Size, Reversal, Indexing, Test Suite) | 📖 [View Documentation](./problem-Solving-Level5/Projects/Project01_DoublyLinkedList/README.md) |
+| 02 | **Queue Implementation** | Doubly Linked List Wrapper | FIFO Operations (push, pop, front, back, Size, IsEmpty) via Composition | 📖 [View Documentation](./problem-Solving-Level5/Projects/Project02_MyQueue/README.md) |
 
 *(New projects will be added incrementally as they are completed)*
 
 ---
 
-## ??? Environment & Tools
+## 🛠️ Environment & Tools
 - **Roadmap:** Programming Advices - Course 13 (Algorithms & Data Structures Level 5)
 - **Language:** Modern C++ (C++17 / C++20)
 - **IDE:** Visual Studio
