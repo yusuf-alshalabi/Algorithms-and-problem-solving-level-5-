@@ -16,11 +16,10 @@ private:
         cout << "========================================\n";
     }
 
-    static void _TestPushOperations(clsMyQueue<int>& queue)
+    static void _TestBasicOperations(clsMyQueue<int>& queue)
     {
-        _PrintSectionTitle("1. Testing Push Operations");
+        _PrintSectionTitle("1. Testing Basic Queue Operations");
 
-        cout << "Pushing items (10, 20, 30, 40, 50)...\n";
         queue.push(10);
         queue.push(20);
         queue.push(30);
@@ -29,30 +28,47 @@ private:
 
         cout << "Queue Contents: ";
         queue.Print();
-    }
-
-    static void _TestAccessAndInfoOperations(clsMyQueue<int>& queue)
-    {
-        _PrintSectionTitle("2. Testing Access & Info Operations");
-
-        cout << "Queue Size: " << queue.Size() << "\n";
-        cout << "Is Empty?  " << (queue.IsEmpty() ? "Yes" : "No") << "\n";
         cout << "Front Item: " << queue.front() << "\n";
         cout << "Back Item:  " << queue.back() << "\n";
     }
 
-    static void _TestPopOperations(clsMyQueue<int>& queue)
+    static void _TestExtensions(clsMyQueue<int>& queue)
     {
-        _PrintSectionTitle("3. Testing Pop Operation");
+        _PrintSectionTitle("2. Testing Queue Extensions (1 to 7)");
 
-        cout << "Popping front item...\n";
-        queue.pop();
+        // Extension 1: GetItem
+        cout << "Item at Index 2: " << queue.GetItem(2) << "\n";
 
-        cout << "Queue Contents after Pop: ";
+        // Extension 2: Reverse
+        cout << "\nReversing Queue...\n";
+        queue.Reverse();
+        cout << "Queue after Reverse: ";
         queue.Print();
 
-        cout << "New Front Item: " << queue.front() << "\n";
-        cout << "New Queue Size: " << queue.Size() << "\n";
+        // Extension 3: UpdateItem
+        cout << "\nUpdating Index 0 to 99...\n";
+        queue.UpdateItem(0, 99);
+        cout << "Queue after Update: ";
+        queue.Print();
+
+        // Extension 4: InsertAfter
+        cout << "\nInserting 25 after Index 1...\n";
+        queue.InsertAfter(1, 25);
+        cout << "Queue after InsertAfter: ";
+        queue.Print();
+
+        // Extension 5 & 6: InsertAtFront & InsertAtBack
+        cout << "\nInserting 5 at Front and 60 at Back...\n";
+        queue.InsertAtFront(5);
+        queue.InsertAtBack(60);
+        cout << "Queue Contents: ";
+        queue.Print();
+
+        // Extension 7: Clear
+        cout << "\nClearing Queue...\n";
+        queue.Clear();
+        cout << "Is Empty after Clear? " << (queue.IsEmpty() ? "Yes" : "No") << "\n";
+        cout << "Size after Clear:     " << queue.Size() << "\n";
     }
 
 public:
@@ -62,12 +78,11 @@ public:
         clsMyQueue<int> queue;
 
         cout << "==================================================\n";
-        cout << "      RUNNING FULL TESTS FOR clsMyQueue           \n";
+        cout << "    RUNNING EXTENDED TESTS FOR clsMyQueue         \n";
         cout << "==================================================\n";
 
-        _TestPushOperations(queue);
-        _TestAccessAndInfoOperations(queue);
-        _TestPopOperations(queue);
+        _TestBasicOperations(queue);
+        _TestExtensions(queue);
 
         cout << "\n==================================================\n";
         cout << "        ALL TESTS COMPLETED SUCCESSFULLY          \n";
