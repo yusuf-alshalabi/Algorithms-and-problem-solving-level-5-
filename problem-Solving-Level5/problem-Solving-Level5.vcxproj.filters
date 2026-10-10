@@ -13,11 +13,11 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\DS">
-      <UniqueIdentifier>{bffaf75d-ccab-47cd-b837-8ff9838a90e7}</UniqueIdentifier>
+    <Filter Include="Header Files\Project01_DoublyLinkedList">
+      <UniqueIdentifier>{ddc00257-c2df-403a-ae06-0896cb036871}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Test">
-      <UniqueIdentifier>{d36e035c-f07b-4881-997f-92e294072a15}</UniqueIdentifier>
+    <Filter Include="Header Files\Project02_MyQueue">
+      <UniqueIdentifier>{f5bd172b-f052-4052-b2ea-c36cb7c3e7c6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -26,11 +26,17 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DS\clsDblLinkedList.h">
-      <Filter>Header Files\DS</Filter>
+    <ClInclude Include="Projects\Project02_MyQueue\clsMyQueueTest.h">
+      <Filter>Header Files\Project02_MyQueue</Filter>
     </ClInclude>
-    <ClInclude Include="Test\clsDblLinkedListTest.h">
-      <Filter>Header Files\Test</Filter>
+    <ClInclude Include="Projects\Project02_MyQueue\clsMyQueue.h">
+      <Filter>Header Files\Project02_MyQueue</Filter>
+    </ClInclude>
+    <ClInclude Include="Projects\Project01_DoublyLinkedList\clsDblLinkedList.h">
+      <Filter>Header Files\Project01_DoublyLinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="Projects\Project01_DoublyLinkedList\clsDblLinkedListTest.h">
+      <Filter>Header Files\Project01_DoublyLinkedList</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

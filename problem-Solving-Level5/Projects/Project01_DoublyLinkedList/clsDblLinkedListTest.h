@@ -1,7 +1,7 @@
 #pragma once
 
 #include <iostream>
-#include "../DS/clsDblLinkedList.h"
+#include "clsDblLinkedList.h"
 
 using namespace std;
 

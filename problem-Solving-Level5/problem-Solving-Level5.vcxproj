@@ -142,8 +142,10 @@
     <ClCompile Include="problem-Solving-Level5.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DS\clsDblLinkedList.h" />
-    <ClInclude Include="Test\clsDblLinkedListTest.h" />
+    <ClInclude Include="Projects\Project01_DoublyLinkedList\clsDblLinkedList.h" />
+    <ClInclude Include="Projects\Project01_DoublyLinkedList\clsDblLinkedListTest.h" />
+    <ClInclude Include="Projects\Project02_MyQueue\clsMyQueue.h" />
+    <ClInclude Include="Projects\Project02_MyQueue\clsMyQueueTest.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
