@@ -237,4 +237,20 @@ public:
 			head = temp->prev;
 		}
     }
+
+    Node* GetNode(int index)
+    {
+        if (index < 0 || index >= _Size)
+        {
+            return NULL;
+        }
+
+        Node* current = head;
+        for (int i = 0; i < index; i++)
+        {
+            current = current->next;
+        }
+
+        return current;
+    }
 };
