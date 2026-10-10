@@ -15,12 +15,12 @@ int main()
     MydblLinkedList.InsertAtBeginning(2);
     MydblLinkedList.InsertAtBeginning(1);
 
-    cout << "\nLinked List Contenet:\n";
+    cout << "\nLinked List Content:\n";
     MydblLinkedList.PrintList();
 
-    MydblLinkedList.UpdateItem(2, 500);
+    MydblLinkedList.InsertAfter(4, 500);
 
-    cout << "\nAfter Updating Item(2): " << "\n";
+    cout << "\nAfter Insert:\n";
     MydblLinkedList.PrintList();
 
 

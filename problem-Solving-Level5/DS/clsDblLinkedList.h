@@ -211,31 +211,35 @@ public:
         return _Size;
     }
 
-	bool IsEmpty()
-	{
-		return _Size == 0;
-	}
+    bool IsEmpty()
+    {
+        return (_Size == 0 ? true : false);
 
-	void Clear()
-	{
-		while (_Size > 0) {
-			DeleteFirstNode();
-		}
-	}
+    }
 
-    void Reverse()
-    { 
-		Node* current = head;
-		Node* temp = NULL;
-		while (current != NULL) {
-			temp = current->prev;
-			current->prev = current->next;
-			current->next = temp;
-			current = current->prev;
-		}
-		if (temp != NULL) {
-			head = temp->prev;
-		}
+    void Clear()
+    {
+        while (_Size > 0)
+        {
+            DeleteFirstNode();
+        }
+    }
+
+
+    void  Reverse()
+    {
+        Node* current = head;
+        Node* temp = nullptr;
+        while (current != nullptr) {
+            temp = current->prev;
+            current->prev = current->next;
+            current->next = temp;
+            current = current->prev;
+        }
+
+        if (temp != nullptr) {
+            head = temp->prev;
+        }
     }
 
     Node* GetNode(int index)
@@ -254,25 +258,42 @@ public:
         return current;
     }
 
-	T GetItem(int index)
-	{
-		Node* ItemNode = GetNode(index);
-		if (ItemNode == NULL)
-            return NULL;
-        else 
-            return ItemNode->value;
-	}
+    T GetItem(int Index)
+    {
 
-	bool UpdateItem(int index, T newValue)
-	{
-		Node* ItemNode = GetNode(index);
+        Node* ItemNode = GetNode(Index);
+
+        if (ItemNode == NULL)
+            return NULL;
+        else
+            return ItemNode->value;
+
+    }
+
+    bool UpdateItem(int Index, T NewValue)
+    {
+        Node* ItemNode = GetNode(Index);
 
         if (ItemNode != NULL)
         {
-            ItemNode->value = newValue;
+            ItemNode->value = NewValue;
             return true;
         }
-		else
-			return false;
-	}
+        else
+            return false;
+
+    }
+
+    bool InsertAfter(int Index, T value)
+    {
+        Node* ItemNode = GetNode(Index);
+        if (ItemNode != NULL)
+        {
+            InsertAfter(ItemNode, value);
+            return true;
+        }
+        else
+            return false;
+    }
 };
+
