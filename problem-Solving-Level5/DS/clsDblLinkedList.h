@@ -1,4 +1,5 @@
 #pragma once
+
 #include <iostream>
 using namespace std;
 
@@ -6,6 +7,9 @@ using namespace std;
 template <class T>
 class clsDblLinkedList
 {
+
+protected:
+    int _Size = 0;
 
 public:
 
@@ -39,6 +43,8 @@ public:
             head->prev = newNode;
         }
         head = newNode;
+        _Size++;
+
     }
 
     // Print the linked list
@@ -52,6 +58,8 @@ public:
             Current = Current->next;
         }
         cout << "\n";
+        delete Current;
+
     }
 
     Node* Find(T Value)
@@ -66,6 +74,7 @@ public:
         }
 
         return NULL;
+
     }
 
     void InsertAfter(Node* current, T value) {
@@ -87,6 +96,8 @@ public:
             current->next->prev = newNode;
         }
         current->next = newNode;
+        _Size++;
+
     }
 
     void InsertAtEnd(T value) {
@@ -114,6 +125,8 @@ public:
             current->next = newNode;
             newNode->prev = current;
         }
+        _Size++;
+
     }
 
     void DeleteNode(Node*& NodeToDelete) {
@@ -136,6 +149,8 @@ public:
             NodeToDelete->prev->next = NodeToDelete->next;
         }
         delete NodeToDelete;
+
+        _Size--;
     }
 
     void DeleteFirstNode()
@@ -157,6 +172,7 @@ public:
             head->prev = NULL;
         }
         delete temp;
+        _Size--;
     }
 
     void DeleteLastNode() {
@@ -187,5 +203,11 @@ public:
         Node* temp = current->next;
         current->next = NULL;
         delete temp;
+        _Size--;
+    }
+
+    int Size()
+    {
+        return _Size;
     }
 };
