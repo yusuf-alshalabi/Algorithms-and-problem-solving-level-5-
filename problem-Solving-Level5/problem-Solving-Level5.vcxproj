@@ -146,6 +146,8 @@
     <ClInclude Include="Projects\Project01_DoublyLinkedList\clsDblLinkedListTest.h" />
     <ClInclude Include="Projects\Project02_MyQueue\clsMyQueue.h" />
     <ClInclude Include="Projects\Project02_MyQueue\clsMyQueueTest.h" />
+    <ClInclude Include="Projects\Project03_MyStack\clsMyStack.h" />
+    <ClInclude Include="Projects\Project03_MyStack\clsMyStackTest.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

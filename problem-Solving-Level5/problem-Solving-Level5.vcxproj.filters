@@ -19,6 +19,9 @@
     <Filter Include="Header Files\Project02_MyQueue">
       <UniqueIdentifier>{f5bd172b-f052-4052-b2ea-c36cb7c3e7c6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Project03_MyStack">
+      <UniqueIdentifier>{26a1b569-ed8a-4097-a889-6fda0c032973}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="problem-Solving-Level5.cpp">
@@ -37,6 +40,12 @@
     </ClInclude>
     <ClInclude Include="Projects\Project01_DoublyLinkedList\clsDblLinkedListTest.h">
       <Filter>Header Files\Project01_DoublyLinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="Projects\Project03_MyStack\clsMyStack.h">
+      <Filter>Header Files\Project03_MyStack</Filter>
+    </ClInclude>
+    <ClInclude Include="Projects\Project03_MyStack\clsMyStackTest.h">
+      <Filter>Header Files\Project03_MyStack</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
