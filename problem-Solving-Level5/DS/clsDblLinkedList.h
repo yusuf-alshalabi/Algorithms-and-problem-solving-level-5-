@@ -253,4 +253,13 @@ public:
 
         return current;
     }
+
+	T GetItem(int index)
+	{
+		Node* ItemNode = GetNode(index);
+		if (ItemNode == NULL)
+            return NULL;
+        else 
+            return ItemNode->value;
+	}
 };
