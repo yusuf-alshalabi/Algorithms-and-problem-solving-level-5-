@@ -41,10 +41,11 @@ Rather than reimplementing low-level node linkage, `clsMyQueue<T>` leverages the
 
 | Operation | Time Complexity | Auxiliary Space | Complexity Rationale |
 |---|---|---|---|
-| push | O(1) | O(1) | Appends directly to list tail. |
-| pop | O(1) | O(1) | Removes list head directly without traversal. |
-| front | O(1) | O(1) | Fetches head node value directly. |
-| back | O(n) | O(1) | Traverses list to target index (Size - 1). |
+| push / InsertAtBack | O(1) | O(1) | Appends directly to list tail. |
+| pop / InsertAtFront | O(1) | O(1) | Manipulates list head directly. |
+| front / GetItem(0) | O(1) | O(1) | Fetches head node value directly. |
+| back | O(n) | O(1) | Traverses list to target back index. |
+| Reverse | O(n) | O(1) | Swaps head/tail pointers across nodes. |
 | Size | O(1) | O(1) | Returns dynamic _Size variable tracked on mutation. |
 | IsEmpty | O(1) | O(1) | Checks if _Size == 0. |
 
