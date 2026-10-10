@@ -27,6 +27,13 @@ Rather than reimplementing low-level node linkage, `clsMyQueue<T>` leverages the
 | Size() | int | Returns the total count of elements currently in the queue. |
 | IsEmpty() | bool | Evaluates whether the queue contains zero elements. |
 | Print() | void | Displays all queue elements sequentially from front to back. |
+| GetItem(int index) | T | Retrieves the item at a specific zero-based index. |
+| Reverse() | void | Reverses the order of all elements in the queue. |
+| UpdateItem(int index, T val) | bool | Updates the value of the item at a given index. |
+| InsertAfter(int index, T val) | void | Inserts a new value after a specific index. |
+| InsertAtFront(T val) | void | Inserts a new value directly at the front of the queue. |
+| InsertAtBack(T val) | void | Inserts a new value directly at the back of the queue. |
+| Clear() | void | Removes all elements and resets queue size to zero. |
 
 ---
 
