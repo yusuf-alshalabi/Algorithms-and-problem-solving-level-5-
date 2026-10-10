@@ -215,4 +215,11 @@ public:
 	{
 		return _Size == 0;
 	}
+
+	void Clear()
+	{
+		while (_Size > 0) {
+			DeleteFirstNode();
+		}
+	}
 };
