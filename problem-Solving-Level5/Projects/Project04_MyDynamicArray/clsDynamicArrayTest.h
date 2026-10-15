@@ -50,8 +50,31 @@ public:
         cout << "Array Contents after expansion & setting: ";
         MyDynamicArray.PrintList();
 
-        // Testing DeleteItemAt Extension
-        _PrintSectionTitle("Testing DeleteItemAt Extension (Deleting index 2 [val 30])");
+        // Testing Find Extension
+        _PrintSectionTitle("Testing Find Extension");
+        int target = 40;
+        int foundIndex = MyDynamicArray.Find(target);
+        if (foundIndex != -1)
+        {
+            cout << "Item " << target << " found at index: " << foundIndex << "\n";
+        }
+        else
+        {
+            cout << "Item " << target << " not found!\n";
+        }
+
+        // Testing DeleteItem Extension (Deleting by value)
+        _PrintSectionTitle("Testing DeleteItem Extension (Deleting value 40)");
+        if (MyDynamicArray.DeleteItem(40))
+        {
+            cout << "Value 40 deleted successfully!\n";
+        }
+        cout << "New Array Size: " << MyDynamicArray.Size() << "\n";
+        cout << "Array Contents after DeleteItem: ";
+        MyDynamicArray.PrintList();
+
+        // Testing DeleteItemAt Extension (Deleting index 2 [val 30])
+        _PrintSectionTitle("Testing DeleteItemAt Extension (Deleting index 2)");
         if (MyDynamicArray.DeleteItemAt(2))
         {
             cout << "Item deleted successfully!\n";
