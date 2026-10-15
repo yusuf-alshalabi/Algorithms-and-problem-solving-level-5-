@@ -31,6 +31,9 @@
     <Filter Include="Header Files\Project06_MyStackArr">
       <UniqueIdentifier>{f4e67e2c-42b4-485c-9318-efbf8de82f65}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Project07_Undo-Redo">
+      <UniqueIdentifier>{bf2fba0d-3db8-4707-954e-741805247721}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="problem-Solving-Level5.cpp">
@@ -73,6 +76,12 @@
     </ClInclude>
     <ClInclude Include="Projects\Project06_MyStackArr\clsMyStackArrTest.h">
       <Filter>Header Files\Project06_MyStackArr</Filter>
+    </ClInclude>
+    <ClInclude Include="Projects\Project07_Undo-Redo\clsMyString.h">
+      <Filter>Header Files\Project07_Undo-Redo</Filter>
+    </ClInclude>
+    <ClInclude Include="Projects\Project07_Undo-Redo\clsMyStringTest.h">
+      <Filter>Header Files\Project07_Undo-Redo</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

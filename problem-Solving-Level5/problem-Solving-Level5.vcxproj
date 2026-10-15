@@ -154,6 +154,8 @@
     <ClInclude Include="Projects\Project05_MyQueueArr\clsMyQueueArrTest.h" />
     <ClInclude Include="Projects\Project06_MyStackArr\clsMyStackArr.h" />
     <ClInclude Include="Projects\Project06_MyStackArr\clsMyStackArrTest.h" />
+    <ClInclude Include="Projects\Project07_Undo-Redo\clsMyString.h" />
+    <ClInclude Include="Projects\Project07_Undo-Redo\clsMyStringTest.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
