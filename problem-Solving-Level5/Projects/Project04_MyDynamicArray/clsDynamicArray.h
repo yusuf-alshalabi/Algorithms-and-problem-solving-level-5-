@@ -84,5 +84,33 @@ public:
         delete[] OriginalArray;
         OriginalArray = _TempArray;
     }
-};
 
+    T GetItem(int index)
+    {
+        return OriginalArray[index];
+    }
+
+    void  Reverse()
+    {
+        _TempArray = new T[_Size];
+
+        int counter = 0;
+
+        for (int i = _Size - 1; i >= 0; i--)
+        {
+            _TempArray[counter] = OriginalArray[i];
+            counter++;
+        }
+
+        delete[] OriginalArray;
+        OriginalArray = _TempArray;
+    }
+
+    void Clear()
+    {
+        _Size = 0;
+        _TempArray = new T[0];
+        delete[] OriginalArray;
+        OriginalArray = _TempArray;
+    }
+};
