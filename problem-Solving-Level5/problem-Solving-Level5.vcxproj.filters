@@ -25,6 +25,9 @@
     <Filter Include="Header Files\Project04_MyDynamicArray">
       <UniqueIdentifier>{bbbce94c-8b02-4b2f-80ab-f064093c1d2c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Project05_MyQueueArr">
+      <UniqueIdentifier>{6422311f-cd81-4e78-b05e-91855b7f1d4a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="problem-Solving-Level5.cpp">
@@ -55,6 +58,12 @@
     </ClInclude>
     <ClInclude Include="Projects\Project04_MyDynamicArray\clsDynamicArrayTest.h">
       <Filter>Header Files\Project04_MyDynamicArray</Filter>
+    </ClInclude>
+    <ClInclude Include="Projects\Project05_MyQueueArr\clsMyQueueArr.h">
+      <Filter>Header Files\Project05_MyQueueArr</Filter>
+    </ClInclude>
+    <ClInclude Include="Projects\Project05_MyQueueArr\clsMyQueueArrTest.h">
+      <Filter>Header Files\Project05_MyQueueArr</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

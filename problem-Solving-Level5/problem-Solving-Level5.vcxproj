@@ -150,6 +150,8 @@
     <ClInclude Include="Projects\Project03_MyStack\clsMyStackTest.h" />
     <ClInclude Include="Projects\Project04_MyDynamicArray\clsDynamicArray.h" />
     <ClInclude Include="Projects\Project04_MyDynamicArray\clsDynamicArrayTest.h" />
+    <ClInclude Include="Projects\Project05_MyQueueArr\clsMyQueueArr.h" />
+    <ClInclude Include="Projects\Project05_MyQueueArr\clsMyQueueArrTest.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
