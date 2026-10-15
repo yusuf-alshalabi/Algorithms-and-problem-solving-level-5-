@@ -74,17 +74,17 @@ A generic C++ implementation of a custom **Dynamic Array** template class (`clsD
 
 ### 🔹 Extension 12: Conditional Insertion Before Index (`InsertBefore()`)
 - **Method Added:** `bool InsertBefore(int index, T value)`
-- **Logic:** Checks boundary conditions (delegates to `InsertAtBeginning` if index < 1); otherwise, delegates to `InsertAt(index - 1, value)`.
+- **Logic:** Checks boundary conditions (delegates to `InsertAt(0, value)` if index < 1); otherwise, delegates to `InsertAt(index - 1, value)`.
 - **Performance:** $O(n)$ time complexity, $O(n)$ auxiliary space complexity.
 
 ### 🔹 Extension 13: Conditional Insertion After Index (`InsertAfter()`)
 - **Method Added:** `bool InsertAfter(int index, T value)`
-- **Logic:** Checks boundary conditions (delegates to `InsertAtEnd` if index >= _Size); otherwise, delegates to `InsertAt(index + 1, value)`.
+- **Logic:** Checks boundary conditions (delegates to `InsertAt(_Size, value)` if index >= _Size); otherwise, delegates to `InsertAt(index + 1, value)`.
 - **Performance:** $O(n)$ time complexity, $O(n)$ auxiliary space complexity.
 
 ### 🔹 Extension 14: End Item Insertion (`InsertAtEnd()`)
-- **Method Added:** `bool InsertAtEnd(T value)`
-- **Logic:** Delegates insertion directly to `InsertAt(_Size, value)` to append an element at the end of the array.
+- **Method Added:** `void InsertAtEnd(T value)`
+- **Logic:** Delegates insertion directly to `InsertAt(_Size, value)` to append an element at the end of the array with a `void` return type.
 - **Performance:** $O(n)$ time complexity, $O(n)$ auxiliary space complexity.
 
 ---
