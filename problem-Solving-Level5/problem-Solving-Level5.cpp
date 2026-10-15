@@ -4,6 +4,7 @@
 #include "Projects/Project04_MyDynamicArray/clsDynamicArrayTest.h"
 #include "Projects/Project05_MyQueueArr/clsMyQueueArrTest.h"
 #include "Projects/Project06_MyStackArr/clsMyStackArrTest.h"
+#include "Projects/Project07_Undo-Redo/clsMyStringTest.h"
 
 using namespace std;
 
@@ -14,7 +15,8 @@ int main()
     //clsMyQueueTest::RunTests();
     //clsDynamicArrayTest::RunTests();
     //clsMyQueueArrTest::RunTests();
-    clsMyStackArrTest::RunTests();
+    //clsMyStackArrTest::RunTests();
+    clsMyStringTest::RunTests();
 
     system("pause>0");
     return 0;
