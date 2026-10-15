@@ -42,6 +42,16 @@ A generic C++ implementation of a custom **Dynamic Array** template class (`clsD
 - **Logic:** Validates index bounds, decreases the size, allocates a new dynamic array of size `_Size`, copies all elements before and after the target index while shifting indices accordingly, deallocates the old memory block, and updates the array pointer.
 - **Performance:** $O(n)$ time complexity, $O(n)$ auxiliary space complexity (due to array reconstruction and element shifting).
 
+### 🔹 Extension 6: First Item Deletion (`DeleteFirstItem()`)
+- **Method Added:** `void DeleteFirstItem()`
+- **Logic:** Delegates deletion directly to `DeleteItemAt(0)` to remove the head element and shift subsequent elements.
+- **Performance:** $O(n)$ time complexity, $O(n)$ auxiliary space complexity.
+
+### 🔹 Extension 7: Last Item Deletion (`DeleteLastItem()`)
+- **Method Added:** `void DeleteLastItem()`
+- **Logic:** Delegates deletion directly to `DeleteItemAt(_Size - 1)` to remove the tail element.
+- **Performance:** $O(n)$ time complexity, $O(n)$ auxiliary space complexity.
+
 ---
 
 ## ⏱️ Time & Space Complexity Analysis
@@ -56,6 +66,8 @@ A generic C++ implementation of a custom **Dynamic Array** template class (`clsD
 | `Reverse` | $O(n)$ | $O(n)$ | Allocates temporary array and copies elements backward. |
 | `Clear` | $O(1)$ | $O(1)$ | Resets size pointer and reassigns empty allocation. |
 | `DeleteItemAt` | $O(n)$ | $O(n)$ | Validates bounds, shifts elements, and reallocates memory. |
+| `DeleteFirstItem` | $O(n)$ | $O(n)$ | Delegates to `DeleteItemAt(0)` with element shifting. |
+| `DeleteLastItem` | $O(n)$ | $O(n)$ | Delegates to `DeleteItemAt(_Size - 1)` with reallocation. |
 
 ---
 
