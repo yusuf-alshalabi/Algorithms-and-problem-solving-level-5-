@@ -28,6 +28,9 @@
     <Filter Include="Header Files\Project05_MyQueueArr">
       <UniqueIdentifier>{6422311f-cd81-4e78-b05e-91855b7f1d4a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Project06_MyStackArr">
+      <UniqueIdentifier>{f4e67e2c-42b4-485c-9318-efbf8de82f65}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="problem-Solving-Level5.cpp">
@@ -64,6 +67,12 @@
     </ClInclude>
     <ClInclude Include="Projects\Project05_MyQueueArr\clsMyQueueArrTest.h">
       <Filter>Header Files\Project05_MyQueueArr</Filter>
+    </ClInclude>
+    <ClInclude Include="Projects\Project06_MyStackArr\clsMyStackArr.h">
+      <Filter>Header Files\Project06_MyStackArr</Filter>
+    </ClInclude>
+    <ClInclude Include="Projects\Project06_MyStackArr\clsMyStackArrTest.h">
+      <Filter>Header Files\Project06_MyStackArr</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
