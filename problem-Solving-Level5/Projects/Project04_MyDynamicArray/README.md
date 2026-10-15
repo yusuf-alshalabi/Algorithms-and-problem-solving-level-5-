@@ -37,6 +37,11 @@ A generic C++ implementation of a custom **Dynamic Array** template class (`clsD
 - **Logic:** Resets the array size tracking variable to zero, allocates an empty dynamic array block, safely deletes the old heap memory, and reassigns the pointer.
 - **Performance:** $O(1)$ time complexity, $O(1)$ auxiliary space complexity.
 
+### 🔹 Extension 5: Index-based Item Deletion (`DeleteItemAt()`)
+- **Method Added:** `bool DeleteItemAt(int index)`
+- **Logic:** Validates index bounds, decreases the size, allocates a new dynamic array of size `_Size`, copies all elements before and after the target index while shifting indices accordingly, deallocates the old memory block, and updates the array pointer.
+- **Performance:** $O(n)$ time complexity, $O(n)$ auxiliary space complexity (due to array reconstruction and element shifting).
+
 ---
 
 ## ⏱️ Time & Space Complexity Analysis
@@ -50,6 +55,7 @@ A generic C++ implementation of a custom **Dynamic Array** template class (`clsD
 | `Resize` | $O(n)$ | $O(n)$ | Allocates new memory block and copies active elements. |
 | `Reverse` | $O(n)$ | $O(n)$ | Allocates temporary array and copies elements backward. |
 | `Clear` | $O(1)$ | $O(1)$ | Resets size pointer and reassigns empty allocation. |
+| `DeleteItemAt` | $O(n)$ | $O(n)$ | Validates bounds, shifts elements, and reallocates memory. |
 
 ---
 
