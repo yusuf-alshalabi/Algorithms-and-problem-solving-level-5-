@@ -67,6 +67,26 @@ A generic C++ implementation of a custom **Dynamic Array** template class (`clsD
 - **Logic:** Validates index bounds (`0 <= index <= _Size`), increments the array size, allocates a new dynamic array, copies elements prior to the insertion index, inserts the new value at the target index, shifts and copies remaining elements, deallocates old memory, and updates the pointer.
 - **Performance:** $O(n)$ time complexity, $O(n)$ auxiliary space complexity (due to array expansion and element shifting).
 
+### 🔹 Extension 11: Beginning Item Insertion (`InsertAtBeginning()`)
+- **Method Added:** `void InsertAtBeginning(T value)`
+- **Logic:** Delegates insertion directly to `InsertAt(0, value)` to prepend an element at the very front of the array.
+- **Performance:** $O(n)$ time complexity, $O(n)$ auxiliary space complexity.
+
+### 🔹 Extension 12: Conditional Insertion Before Index (`InsertBefore()`)
+- **Method Added:** `bool InsertBefore(int index, T value)`
+- **Logic:** Checks boundary conditions (delegates to `InsertAtBeginning` if index < 1); otherwise, delegates to `InsertAt(index - 1, value)`.
+- **Performance:** $O(n)$ time complexity, $O(n)$ auxiliary space complexity.
+
+### 🔹 Extension 13: Conditional Insertion After Index (`InsertAfter()`)
+- **Method Added:** `bool InsertAfter(int index, T value)`
+- **Logic:** Checks boundary conditions (delegates to `InsertAtEnd` if index >= _Size); otherwise, delegates to `InsertAt(index + 1, value)`.
+- **Performance:** $O(n)$ time complexity, $O(n)$ auxiliary space complexity.
+
+### 🔹 Extension 14: End Item Insertion (`InsertAtEnd()`)
+- **Method Added:** `bool InsertAtEnd(T value)`
+- **Logic:** Delegates insertion directly to `InsertAt(_Size, value)` to append an element at the end of the array.
+- **Performance:** $O(n)$ time complexity, $O(n)$ auxiliary space complexity.
+
 ---
 
 ## ⏱️ Time & Space Complexity Analysis
@@ -86,6 +106,10 @@ A generic C++ implementation of a custom **Dynamic Array** template class (`clsD
 | `Find` | $O(n)$ | $O(1)$ | Linear scan through array elements. |
 | `DeleteItem` | $O(n)$ | $O(n)$ | Combines linear search (`Find`) with index-based deletion. |
 | `InsertAt` | $O(n)$ | $O(n)$ | Validates bounds, shifts elements, and reallocates memory. |
+| `InsertAtBeginning` | $O(n)$ | $O(n)$ | Delegates to `InsertAt(0, value)` with shifting. |
+| `InsertBefore` | $O(n)$ | $O(n)$ | Conditional bounds check and delegates to `InsertAt`. |
+| `InsertAfter` | $O(n)$ | $O(n)$ | Conditional bounds check and delegates to `InsertAt`. |
+| `InsertAtEnd` | $O(n)$ | $O(n)$ | Delegates to `InsertAt(_Size, value)` with reallocation. |
 
 ---
 
