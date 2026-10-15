@@ -149,4 +149,28 @@ public:
 	{
 		DeleteItemAt(_Size - 1);
 	}
+
+    int Find(T vlue)
+    {
+		for (int i = 0; i < _Size; i++)
+		{
+			if (OriginalArray[i] == vlue)
+			{
+				return i;
+			}
+		}
+		return -1;
+    }
+
+    bool DeleteItem(T value) 
+    {
+		int index = Find(value);
+		if (index == -1)
+		{
+			return false;
+		}
+        DeleteItemAt(index);
+        return true;
+
+    }
 };
