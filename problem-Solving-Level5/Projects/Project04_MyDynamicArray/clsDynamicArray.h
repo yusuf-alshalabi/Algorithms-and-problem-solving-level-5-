@@ -209,10 +209,11 @@ public:
         InsertAt(0, value);
     }
 
+
     bool InsertBefore(int index, T value)
     {
         if (index < 1)
-            return InsertAtBeginning(value);
+            return InsertAt(0, value);
         else
             return InsertAt(index - 1, value);
     }
@@ -220,15 +221,16 @@ public:
     bool InsertAfter(int index, T value)
     {
         if (index >= _Size)
-            return InsertAtEnd(value);
+            return InsertAt(_Size, value);
         else
             return InsertAt(index + 1, value);
     }
 
-    bool InsertAtEnd(T value)
+    void InsertAtEnd(T value)
     {
-        return InsertAt(_Size, value);
+        InsertAt(_Size, value);
     }
+
 
 
 };
