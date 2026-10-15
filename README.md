@@ -13,7 +13,7 @@ Each project is organized as an independent modular folder containing its implem
 | 01 | **Doubly Linked List** | Pointer-based Node List | Core CRUD Operations + 8 Incremental Extensions (Size, Reversal, Indexing, Test Suite) | 📖 [View Documentation](./problem-Solving-Level5/Projects/Project01_DoublyLinkedList/README.md) |
 | 02 | **Queue Implementation** | Doubly Linked List Wrapper | FIFO Operations (push, pop, front, back, Size, IsEmpty + 7 Extensions) via Composition | 📖 [View Documentation](./problem-Solving-Level5/Projects/Project02_MyQueue/README.md) |
 | 03 | **Stack Implementation** | Queue Inheritance | LIFO Operations (push, pop, top, bottom, Size, IsEmpty + Extensions) via Inheritance | 📖 [View Documentation](./problem-Solving-Level5/Projects/Project03_MyStack/README.md) |
-| 04 | **Dynamic Array** | Raw Heap Pointer Pointer | Core Heap Memory Management & Base Indexing Operations | 📖 [View Documentation](./problem-Solving-Level5/Projects/Project04_MyDynamicArray/README.md) |
+| 04 | **Dynamic Array** | Raw Heap Pointer Array | Core Management + 14 Incremental Extensions (Resize, GetItem, Reverse, Clear, Delete operations, Find, and 5 Insert variants) | 📖 [View Documentation](./problem-Solving-Level5/Projects/Project04_MyDynamicArray/README.md) |
 
 *(New projects will be added incrementally as they are completed)*
 
@@ -24,4 +24,3 @@ Each project is organized as an independent modular folder containing its implem
 - **Language:** Modern C++ (C++17 / C++20)
 - **IDE:** Visual Studio
 - **Compiler:** MSVC / GCC
--
