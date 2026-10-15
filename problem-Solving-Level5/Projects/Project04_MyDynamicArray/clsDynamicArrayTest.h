@@ -20,7 +20,7 @@ public:
 
     static void RunTests()
     {
-        _PrintSectionTitle("Testing Base clsDynamicArray & Resize Extension");
+        _PrintSectionTitle("Testing Base clsDynamicArray & Extensions");
 
         clsDynamicArray<int> MyDynamicArray(5);
 
@@ -36,28 +36,36 @@ public:
         cout << "Array Contents: ";
         MyDynamicArray.PrintList();
 
-        // Testing Resize Extension (Expansion)
-        _PrintSectionTitle("Testing Resize (Expanding from 5 to 8)");
-        MyDynamicArray.Resize(8);
-        cout << "New Array Size: " << MyDynamicArray.Size() << "\n";
-        cout << "Array Contents after expansion: ";
-        MyDynamicArray.PrintList();
+        // Testing GetItem Extension
+        _PrintSectionTitle("Testing GetItem Extension");
+        cout << "Item at index 2: " << MyDynamicArray.GetItem(2) << "\n";
+        cout << "Item at index 4: " << MyDynamicArray.GetItem(4) << "\n";
 
-        // Testing bounds safety in SetItem after resize
-        cout << "\nSetting new items at index 5 and 6...\n";
+        // Testing Resize Extension (Expansion)
+        _PrintSectionTitle("Testing Resize (Expanding from 5 to 7)");
+        MyDynamicArray.Resize(7);
+        cout << "New Array Size: " << MyDynamicArray.Size() << "\n";
         MyDynamicArray.SetItem(5, 60);
         MyDynamicArray.SetItem(6, 70);
+        cout << "Array Contents after expansion & setting: ";
         MyDynamicArray.PrintList();
 
-        // Testing Resize Extension (Shrinking)
-        _PrintSectionTitle("Testing Resize (Shrinking from 8 to 3)");
-        MyDynamicArray.Resize(3);
-        cout << "New Array Size: " << MyDynamicArray.Size() << "\n";
-        cout << "Array Contents after shrinking: ";
+        // Testing Reverse Extension
+        _PrintSectionTitle("Testing Reverse Extension");
+        MyDynamicArray.Reverse();
+        cout << "Array Contents after Reverse: ";
+        MyDynamicArray.PrintList();
+
+        // Testing Clear Extension
+        _PrintSectionTitle("Testing Clear Extension");
+        MyDynamicArray.Clear();
+        cout << "Array Size after Clear: " << MyDynamicArray.Size() << "\n";
+        cout << "Is Array Empty after Clear? " << (MyDynamicArray.IsEmpty() ? "Yes" : "No") << "\n";
+        cout << "Array Contents after Clear: ";
         MyDynamicArray.PrintList();
 
         cout << "\n========================================\n";
-        cout << "   RESIZE EXTENSION TESTS PASSED        \n";
+        cout << "   ALL DYNAMIC ARRAY TESTS PASSED       \n";
         cout << "========================================\n";
     }
 };
