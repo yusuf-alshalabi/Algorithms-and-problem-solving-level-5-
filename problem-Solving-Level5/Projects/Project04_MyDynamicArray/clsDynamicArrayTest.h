@@ -60,6 +60,16 @@ public:
         cout << "Array Contents after DeleteItemAt: ";
         MyDynamicArray.PrintList();
 
+        // Testing DeleteFirstItem & DeleteLastItem Extensions
+        _PrintSectionTitle("Testing DeleteFirstItem & DeleteLastItem Extensions");
+        MyDynamicArray.DeleteFirstItem();
+        cout << "Array Contents after DeleteFirstItem: ";
+        MyDynamicArray.PrintList();
+
+        MyDynamicArray.DeleteLastItem();
+        cout << "Array Contents after DeleteLastItem: ";
+        MyDynamicArray.PrintList();
+
         // Testing Reverse Extension
         _PrintSectionTitle("Testing Reverse Extension");
         MyDynamicArray.Reverse();
