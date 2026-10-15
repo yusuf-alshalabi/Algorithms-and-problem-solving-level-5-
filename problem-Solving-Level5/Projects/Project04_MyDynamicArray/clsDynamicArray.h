@@ -174,7 +174,7 @@ public:
 
     }
 
-    bool InsertAt(T index, T value) 
+    bool InsertAt(int index, T value) 
     {
         if (index > _Size || index < 0)
         {
