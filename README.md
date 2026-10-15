@@ -15,6 +15,7 @@ Each project is organized as an independent modular folder containing its implem
 | 03 | **Stack Implementation** | Queue Inheritance | LIFO Operations (push, pop, top, bottom, Size, IsEmpty + Extensions) via Inheritance | 📖 [View Documentation](./problem-Solving-Level5/Projects/Project03_MyStack/README.md) |
 | 04 | **Dynamic Array** | Raw Heap Pointer Array | Core Management + 14 Incremental Extensions (Resize, GetItem, Reverse, Clear, Delete operations, Find, and 5 Insert variants) | 📖 [View Documentation](./problem-Solving-Level5/Projects/Project04_MyDynamicArray/README.md) |
 | 05 | **Array-Based Queue** | Dynamic Array Wrapper | FIFO Operations (push, pop, front, back, Size, IsEmpty + 7 Extensions) via Composition using Dynamic Array | 📖 [View Documentation](./problem-Solving-Level5/Projects/Project05_MyQueueArr/README.md) |
+| 06 | **Array-Based Stack** | Dynamic Array Inheritance | LIFO Operations (push, pop, Top, Bottom, Size, IsEmpty + Extensions) via Inheritance from Array Queue | 📖 [View Documentation](./problem-Solving-Level5/Projects/Project06_MyStackArr/README.md) |
 
 *(New projects will be added incrementally as they are completed)*
 
@@ -25,3 +26,4 @@ Each project is organized as an independent modular folder containing its implem
 - **Language:** Modern C++ (C++17 / C++20)
 - **IDE:** Visual Studio
 - **Compiler:** MSVC / GCC
+-
