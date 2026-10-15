@@ -113,4 +113,30 @@ public:
         delete[] OriginalArray;
         OriginalArray = _TempArray;
     }
+
+    bool DeleteItemAt(int index)
+    {
+        if (index >= _Size || index < 0)
+        {
+            return false;
+        }
+        _Size--;
+        _TempArray = new T[_Size];
+
+        //copy all before index
+        for (int i = 0; i < index; i++)
+        {
+            _TempArray[i] = OriginalArray[i];
+        }
+
+        //copy all after index
+        for (int i = index + 1; i < _Size + 1; i++)
+        {
+            _TempArray[i - 1] = OriginalArray[i];
+        }
+
+        delete[] OriginalArray;
+        OriginalArray = _TempArray;
+        return true;
+    }
 };
