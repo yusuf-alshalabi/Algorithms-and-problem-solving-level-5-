@@ -50,6 +50,16 @@ public:
         cout << "Array Contents after expansion & setting: ";
         MyDynamicArray.PrintList();
 
+        // Testing InsertAt Extension
+        _PrintSectionTitle("Testing InsertAt Extension (Inserting 99 at index 2)");
+        if (MyDynamicArray.InsertAt(2, 99))
+        {
+            cout << "Item inserted successfully!\n";
+        }
+        cout << "New Array Size: " << MyDynamicArray.Size() << "\n";
+        cout << "Array Contents after InsertAt: ";
+        MyDynamicArray.PrintList();
+
         // Testing Find Extension
         _PrintSectionTitle("Testing Find Extension");
         int target = 40;
@@ -73,7 +83,7 @@ public:
         cout << "Array Contents after DeleteItem: ";
         MyDynamicArray.PrintList();
 
-        // Testing DeleteItemAt Extension (Deleting index 2 [val 30])
+        // Testing DeleteItemAt Extension
         _PrintSectionTitle("Testing DeleteItemAt Extension (Deleting index 2)");
         if (MyDynamicArray.DeleteItemAt(2))
         {
