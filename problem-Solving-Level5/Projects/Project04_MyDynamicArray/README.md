@@ -62,6 +62,11 @@ A generic C++ implementation of a custom **Dynamic Array** template class (`clsD
 - **Logic:** Locates the index of the target value using `Find(value)`. If found, delegates deletion to `DeleteItemAt(index)`; otherwise, returns `false`.
 - **Performance:** $O(n)$ time complexity, $O(n)$ auxiliary space complexity (due to internal delegation to `DeleteItemAt`).
 
+### 🔹 Extension 10: Index-based Item Insertion (`InsertAt()`)
+- **Method Added:** `bool InsertAt(int index, T value)`
+- **Logic:** Validates index bounds (`0 <= index <= _Size`), increments the array size, allocates a new dynamic array, copies elements prior to the insertion index, inserts the new value at the target index, shifts and copies remaining elements, deallocates old memory, and updates the pointer.
+- **Performance:** $O(n)$ time complexity, $O(n)$ auxiliary space complexity (due to array expansion and element shifting).
+
 ---
 
 ## ⏱️ Time & Space Complexity Analysis
@@ -80,6 +85,7 @@ A generic C++ implementation of a custom **Dynamic Array** template class (`clsD
 | `DeleteLastItem` | $O(n)$ | $O(n)$ | Delegates to `DeleteItemAt(_Size - 1)` with reallocation. |
 | `Find` | $O(n)$ | $O(1)$ | Linear scan through array elements. |
 | `DeleteItem` | $O(n)$ | $O(n)$ | Combines linear search (`Find`) with index-based deletion. |
+| `InsertAt` | $O(n)$ | $O(n)$ | Validates bounds, shifts elements, and reallocates memory. |
 
 ---
 
