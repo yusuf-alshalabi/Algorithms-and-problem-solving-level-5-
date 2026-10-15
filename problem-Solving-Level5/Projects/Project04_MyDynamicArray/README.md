@@ -52,6 +52,16 @@ A generic C++ implementation of a custom **Dynamic Array** template class (`clsD
 - **Logic:** Delegates deletion directly to `DeleteItemAt(_Size - 1)` to remove the tail element.
 - **Performance:** $O(n)$ time complexity, $O(n)$ auxiliary space complexity.
 
+### 🔹 Extension 8: Linear Search (`Find()`)
+- **Method Added:** `int Find(T value)`
+- **Logic:** Iterates sequentially through the array elements to locate the target value and returns its zero-based index if found, or `-1` if the value does not exist.
+- **Performance:** $O(n)$ time complexity, $O(1)$ auxiliary space complexity.
+
+### 🔹 Extension 9: Value-based Item Deletion (`DeleteItem()`)
+- **Method Added:** `bool DeleteItem(T value)`
+- **Logic:** Locates the index of the target value using `Find(value)`. If found, delegates deletion to `DeleteItemAt(index)`; otherwise, returns `false`.
+- **Performance:** $O(n)$ time complexity, $O(n)$ auxiliary space complexity (due to internal delegation to `DeleteItemAt`).
+
 ---
 
 ## ⏱️ Time & Space Complexity Analysis
@@ -68,6 +78,8 @@ A generic C++ implementation of a custom **Dynamic Array** template class (`clsD
 | `DeleteItemAt` | $O(n)$ | $O(n)$ | Validates bounds, shifts elements, and reallocates memory. |
 | `DeleteFirstItem` | $O(n)$ | $O(n)$ | Delegates to `DeleteItemAt(0)` with element shifting. |
 | `DeleteLastItem` | $O(n)$ | $O(n)$ | Delegates to `DeleteItemAt(_Size - 1)` with reallocation. |
+| `Find` | $O(n)$ | $O(1)$ | Linear scan through array elements. |
+| `DeleteItem` | $O(n)$ | $O(n)$ | Combines linear search (`Find`) with index-based deletion. |
 
 ---
 
