@@ -14,6 +14,7 @@ Each project is organized as an independent modular folder containing its implem
 | 02 | **Queue Implementation** | Doubly Linked List Wrapper | FIFO Operations (push, pop, front, back, Size, IsEmpty + 7 Extensions) via Composition | 📖 [View Documentation](./problem-Solving-Level5/Projects/Project02_MyQueue/README.md) |
 | 03 | **Stack Implementation** | Queue Inheritance | LIFO Operations (push, pop, top, bottom, Size, IsEmpty + Extensions) via Inheritance | 📖 [View Documentation](./problem-Solving-Level5/Projects/Project03_MyStack/README.md) |
 | 04 | **Dynamic Array** | Raw Heap Pointer Array | Core Management + 14 Incremental Extensions (Resize, GetItem, Reverse, Clear, Delete operations, Find, and 5 Insert variants) | 📖 [View Documentation](./problem-Solving-Level5/Projects/Project04_MyDynamicArray/README.md) |
+| 05 | **Array-Based Queue** | Dynamic Array Wrapper | FIFO Operations (push, pop, front, back, Size, IsEmpty + 7 Extensions) via Composition using Dynamic Array | 📖 [View Documentation](./problem-Solving-Level5/Projects/Project05_MyQueueArr/README.md) |
 
 *(New projects will be added incrementally as they are completed)*
 
