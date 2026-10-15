@@ -50,6 +50,16 @@ public:
         cout << "Array Contents after expansion & setting: ";
         MyDynamicArray.PrintList();
 
+        // Testing DeleteItemAt Extension
+        _PrintSectionTitle("Testing DeleteItemAt Extension (Deleting index 2 [val 30])");
+        if (MyDynamicArray.DeleteItemAt(2))
+        {
+            cout << "Item deleted successfully!\n";
+        }
+        cout << "New Array Size: " << MyDynamicArray.Size() << "\n";
+        cout << "Array Contents after DeleteItemAt: ";
+        MyDynamicArray.PrintList();
+
         // Testing Reverse Extension
         _PrintSectionTitle("Testing Reverse Extension");
         MyDynamicArray.Reverse();
