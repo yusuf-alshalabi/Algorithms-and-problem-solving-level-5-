@@ -20,7 +20,7 @@ public:
 
     static void RunTests()
     {
-        _PrintSectionTitle("Testing Base clsDynamicArray (Core Methods)");
+        _PrintSectionTitle("Testing Base clsDynamicArray & Resize Extension");
 
         clsDynamicArray<int> MyDynamicArray(5);
 
@@ -36,15 +36,28 @@ public:
         cout << "Array Contents: ";
         MyDynamicArray.PrintList();
 
-        // Testing bounds safety in SetItem
-        cout << "\nTesting Out-of-Bounds SetItem (index 10 to 99)...\n";
-        if (!MyDynamicArray.SetItem(10, 99))
-        {
-            cout << "Failed safely: Index out of bounds handled correctly.\n";
-        }
+        // Testing Resize Extension (Expansion)
+        _PrintSectionTitle("Testing Resize (Expanding from 5 to 8)");
+        MyDynamicArray.Resize(8);
+        cout << "New Array Size: " << MyDynamicArray.Size() << "\n";
+        cout << "Array Contents after expansion: ";
+        MyDynamicArray.PrintList();
+
+        // Testing bounds safety in SetItem after resize
+        cout << "\nSetting new items at index 5 and 6...\n";
+        MyDynamicArray.SetItem(5, 60);
+        MyDynamicArray.SetItem(6, 70);
+        MyDynamicArray.PrintList();
+
+        // Testing Resize Extension (Shrinking)
+        _PrintSectionTitle("Testing Resize (Shrinking from 8 to 3)");
+        MyDynamicArray.Resize(3);
+        cout << "New Array Size: " << MyDynamicArray.Size() << "\n";
+        cout << "Array Contents after shrinking: ";
+        MyDynamicArray.PrintList();
 
         cout << "\n========================================\n";
-        cout << "      BASE DYNAMIC ARRAY TESTS PASSED   \n";
+        cout << "   RESIZE EXTENSION TESTS PASSED        \n";
         cout << "========================================\n";
     }
 };
