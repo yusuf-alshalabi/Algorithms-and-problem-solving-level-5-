@@ -16,6 +16,7 @@ Each project is organized as an independent modular folder containing its implem
 | 04 | **Dynamic Array** | Raw Heap Pointer Array | Core Management + 14 Incremental Extensions (Resize, GetItem, Reverse, Clear, Delete operations, Find, and 5 Insert variants) | 📖 [View Documentation](./problem-Solving-Level5/Projects/Project04_MyDynamicArray/README.md) |
 | 05 | **Array-Based Queue** | Dynamic Array Wrapper | FIFO Operations (push, pop, front, back, Size, IsEmpty + 7 Extensions) via Composition using Dynamic Array | 📖 [View Documentation](./problem-Solving-Level5/Projects/Project05_MyQueueArr/README.md) |
 | 06 | **Array-Based Stack** | Dynamic Array Inheritance | LIFO Operations (push, pop, Top, Bottom, Size, IsEmpty + Extensions) via Inheritance from Array Queue | 📖 [View Documentation](./problem-Solving-Level5/Projects/Project06_MyStackArr/README.md) |
+| 07 | **Undo/Redo System** | Dual Standard Stacks | String State Management with Undo/Redo operations and C++ Property Support (`__declspec(property)`) | 📖 [View Documentation](./problem-Solving-Level5/Projects/Project07_Undo-Redo/README.md) |
 
 *(New projects will be added incrementally as they are completed)*
 
