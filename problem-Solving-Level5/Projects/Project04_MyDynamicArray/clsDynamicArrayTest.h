@@ -60,6 +60,27 @@ public:
         cout << "Array Contents after InsertAt: ";
         MyDynamicArray.PrintList();
 
+        // Testing Additional Insert Extensions (11 to 14)
+        _PrintSectionTitle("Testing Advanced Insert Extensions");
+
+        cout << "Inserting 500 at Beginning...\n";
+        MyDynamicArray.InsertAtBeginning(500);
+        MyDynamicArray.PrintList();
+
+        cout << "Inserting 600 at End...\n";
+        MyDynamicArray.InsertAtEnd(600);
+        MyDynamicArray.PrintList();
+
+        cout << "Inserting 777 Before index 3...\n";
+        MyDynamicArray.InsertBefore(3, 777);
+        MyDynamicArray.PrintList();
+
+        cout << "Inserting 888 After index 3...\n";
+        MyDynamicArray.InsertAfter(3, 888);
+        MyDynamicArray.PrintList();
+
+        cout << "Final Size after all inserts: " << MyDynamicArray.Size() << "\n";
+
         // Testing Find Extension
         _PrintSectionTitle("Testing Find Extension");
         int target = 40;
