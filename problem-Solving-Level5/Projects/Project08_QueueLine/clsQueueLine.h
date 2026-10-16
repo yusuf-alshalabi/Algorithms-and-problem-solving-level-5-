@@ -25,7 +25,6 @@ private:
         string _TicketTime;
         short _WaitingClients = 0;
         short _AverageServeTime = 0;
-        short _ExpectedServeTime = 0;
 
     public:
         clsTicket(string Prefix, short Number, short WaitingClients, short AverageServeTime)
@@ -80,6 +79,12 @@ private:
 
 
         }
+
+        void UpdateWaitingInfo()
+        {
+            if (_WaitingClients > 0)
+                _WaitingClients--;
+        }
     };
 
 public:
@@ -124,11 +129,25 @@ public:
         if (QueueLine.empty())
             return false;
 
-
+        // Remove the served ticket
         QueueLine.pop();
 
-        return true;
+        // Update the remaining tickets
+        queue<clsTicket> TempQueueLine;
 
+        while (!QueueLine.empty())
+        {
+            clsTicket Ticket = QueueLine.front();
+            QueueLine.pop();
+
+            Ticket.UpdateWaitingInfo();
+
+            TempQueueLine.push(Ticket);
+        }
+
+        QueueLine = TempQueueLine;
+
+        return true;
     }
 
     short ServedClients()
