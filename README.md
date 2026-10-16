@@ -17,6 +17,7 @@ Each project is organized as an independent modular folder containing its implem
 | 05 | **Array-Based Queue** | Dynamic Array Wrapper | FIFO Operations (push, pop, front, back, Size, IsEmpty + 7 Extensions) via Composition using Dynamic Array | 📖 [View Documentation](./problem-Solving-Level5/Projects/Project05_MyQueueArr/README.md) |
 | 06 | **Array-Based Stack** | Dynamic Array Inheritance | LIFO Operations (push, pop, Top, Bottom, Size, IsEmpty + Extensions) via Inheritance from Array Queue | 📖 [View Documentation](./problem-Solving-Level5/Projects/Project06_MyStackArr/README.md) |
 | 07 | **Undo/Redo System** | Dual Standard Stacks | String State Management with Undo/Redo operations and C++ Property Support (`__declspec(property)`) | 📖 [View Documentation](./problem-Solving-Level5/Projects/Project07_Undo-Redo/README.md) |
+| 08 | **Queue Line System** | Queue & Stack Composites | Ticketing service management with timestamps (`clsDate`), wait times, and RTL/LTR line rendering | 📖 [View Documentation](./problem-Solving-Level5/Projects/Project08_QueueLine/README.md) |
 
 *(New projects will be added incrementally as they are completed)*
 
@@ -27,4 +28,3 @@ Each project is organized as an independent modular folder containing its implem
 - **Language:** Modern C++ (C++17 / C++20)
 - **IDE:** Visual Studio
 - **Compiler:** MSVC / GCC
--
