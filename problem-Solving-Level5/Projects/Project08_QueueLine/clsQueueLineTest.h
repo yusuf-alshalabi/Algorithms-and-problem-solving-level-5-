@@ -34,22 +34,21 @@ public:
 
         PayBillsQueue.PrintInfo();
 
-        // 2. Inspecting Next Client & All Tickets
-        _PrintSectionTitle("2. Inspecting Queue & Tickets Details");
+        // 2. Inspecting Next Client & All Tickets (Before Serving)
+        _PrintSectionTitle("2. Inspecting Queue & All Tickets Details (Before Serving)");
         cout << "Next Client in Line: " << PayBillsQueue.WhoIsNext() << "\n";
-
         PayBillsQueue.PrintAllTickets();
 
         // 3. Line Display Directions (RTL & LTR)
-        _PrintSectionTitle("4. Displaying Ticket Lines (RTL & LTR)");
+        _PrintSectionTitle("3. Displaying Ticket Lines (RTL & LTR)");
         cout << "RTL Line: ";
         PayBillsQueue.PrintTicketsLineRTL();
 
         cout << "LTR Line: ";
         PayBillsQueue.PrintTicketsLineLTR();
 
-        // 4. Serving Clients
-        _PrintSectionTitle("5. Serving Next Client");
+        // 4. Serving Clients & Testing Dynamic Update Feature
+        _PrintSectionTitle("4. Serving Front Client & Testing Dynamic Waiting Info Update");
         if (PayBillsQueue.ServeNextClient())
         {
             cout << "Successfully served front client!\n";
@@ -57,6 +56,10 @@ public:
 
         PayBillsQueue.PrintInfo();
         cout << "Next Client after serving: " << PayBillsQueue.WhoIsNext() << "\n";
+
+        // 5. Inspecting All Tickets Again (To verify waiting clients and expected serve times decreased)
+        _PrintSectionTitle("5. Inspecting All Tickets After Service (Verifying Updated Wait Times)");
+        PayBillsQueue.PrintAllTickets();
 
         _PrintSectionTitle("6. Final Line Status (RTL)");
         PayBillsQueue.PrintTicketsLineRTL();
